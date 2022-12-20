@@ -87,7 +87,7 @@
                                 <a href="contact.html">Creat An Account</a>
                             </li>
                             <li>
-                                <a class="btn btn-custom-size btn-md sapphire-color extbot-primary-hover" href="contact.html">Daftar
+                                <a class="btn btn-custom-size btn-md sapphire-color extbot-primary-hover" href="/register">Daftar
                                     <i class="icofont-double-right"></i>
                                 </a>
                             </li>
