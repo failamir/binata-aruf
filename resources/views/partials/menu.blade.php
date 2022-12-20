@@ -11,11 +11,6 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li>
-                    <select class="searchable-field form-control">
-
-                    </select>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs("admin.home") ? "active" : "" }}" href="{{ route("admin.home") }}">
                         <i class="fas fa-fw fa-tachometer-alt nav-icon">
@@ -74,45 +69,6 @@
                                 {{ trans('cruds.user.title') }}
                             </p>
                         </a>
-                    </li>
-                @endcan
-                @can('contact_management_access')
-                    <li class="nav-item has-treeview {{ request()->is("admin/contact-contacts*") ? "menu-open" : "" }} {{ request()->is("admin/contact-companies*") ? "menu-open" : "" }}">
-                        <a class="nav-link nav-dropdown-toggle {{ request()->is("admin/contact-contacts*") ? "active" : "" }} {{ request()->is("admin/contact-companies*") ? "active" : "" }}" href="#">
-                            <i class="fa-fw nav-icon fas fa-phone-square">
-
-                            </i>
-                            <p>
-                                {{ trans('cruds.contactManagement.title') }}
-                                <i class="right fa fa-fw fa-angle-left nav-icon"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            @can('contact_contact_access')
-                                <li class="nav-item">
-                                    <a href="{{ route("admin.contact-contacts.index") }}" class="nav-link {{ request()->is("admin/contact-contacts") || request()->is("admin/contact-contacts/*") ? "active" : "" }}">
-                                        <i class="fa-fw nav-icon fas fa-user-alt">
-
-                                        </i>
-                                        <p>
-                                            {{ trans('cruds.contactContact.title') }}
-                                        </p>
-                                    </a>
-                                </li>
-                            @endcan
-                            @can('contact_company_access')
-                                <li class="nav-item">
-                                    <a href="{{ route("admin.contact-companies.index") }}" class="nav-link {{ request()->is("admin/contact-companies") || request()->is("admin/contact-companies/*") ? "active" : "" }}">
-                                        <i class="fa-fw nav-icon fas fa-building">
-
-                                        </i>
-                                        <p>
-                                            {{ trans('cruds.contactCompany.title') }}
-                                        </p>
-                                    </a>
-                                </li>
-                            @endcan
-                        </ul>
                     </li>
                 @endcan
                 @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))

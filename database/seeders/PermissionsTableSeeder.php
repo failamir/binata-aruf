@@ -76,50 +76,6 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 17,
-                'title' => 'contact_management_access',
-            ],
-            [
-                'id'    => 18,
-                'title' => 'contact_company_create',
-            ],
-            [
-                'id'    => 19,
-                'title' => 'contact_company_edit',
-            ],
-            [
-                'id'    => 20,
-                'title' => 'contact_company_show',
-            ],
-            [
-                'id'    => 21,
-                'title' => 'contact_company_delete',
-            ],
-            [
-                'id'    => 22,
-                'title' => 'contact_company_access',
-            ],
-            [
-                'id'    => 23,
-                'title' => 'contact_contact_create',
-            ],
-            [
-                'id'    => 24,
-                'title' => 'contact_contact_edit',
-            ],
-            [
-                'id'    => 25,
-                'title' => 'contact_contact_show',
-            ],
-            [
-                'id'    => 26,
-                'title' => 'contact_contact_delete',
-            ],
-            [
-                'id'    => 27,
-                'title' => 'contact_contact_access',
-            ],
-            [
-                'id'    => 28,
                 'title' => 'profile_password_edit',
             ],
         ];
