@@ -1,6 +1,8 @@
 <?php
 
-Route::redirect('/', '/login');
+// Route::redirect('/', '/login');
+Route::redirect('/', '/front');
+Route::get('/front', 'FrontController@front')->name('front');
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
