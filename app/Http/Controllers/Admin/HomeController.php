@@ -45,6 +45,24 @@ class HomeController
             $settings1['fields'] = [];
         }
 
-        return view('home', compact('settings1'));
+        $settings2 = [
+            'chart_title'           => 'Jumlah Pendaftar',
+            'chart_type'            => 'line',
+            'report_type'           => 'group_by_date',
+            'model'                 => 'App\Models\User',
+            'group_by_field'        => 'created_at',
+            'group_by_period'       => 'day',
+            'aggregate_function'    => 'count',
+            'filter_field'          => 'created_at',
+            'filter_period'         => 'week',
+            'group_by_field_format' => 'd-m-Y H:i:s',
+            'column_class'          => 'col-md-6',
+            'entries_number'        => '5',
+            'translation_key'       => 'user',
+        ];
+
+        $chart2 = new LaravelChart($settings2);
+
+        return view('home', compact('chart2', 'settings1'));
     }
 }
